@@ -16,6 +16,7 @@
 		8FB3AB441C200F28006513C5 /* own_cur_location.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FB3AB431C200F28006513C5 /* own_cur_location.png */; };
 		8FB3AB481C201188006513C5 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8FB3AB471C201188006513C5 /* Podfile */; };
 		8FB3AB4A1C20123B006513C5 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB3AB491C20123B006513C5 /* SwiftyJSON.framework */; };
+		8FB3AB4D1C20720B006513C5 /* Taxi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB3AB4C1C20720B006513C5 /* Taxi.swift */; };
 		C93E305776DE172DF98F67A5 /* Pods_Taxi_booking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7D228E1ACC74DD033F17D9 /* Pods_Taxi_booking.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		8FB3AB431C200F28006513C5 /* own_cur_location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = own_cur_location.png; path = Assets.xcassets/own_cur_location.png; sourceTree = "<group>"; };
 		8FB3AB471C201188006513C5 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8FB3AB491C20123B006513C5 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		8FB3AB4C1C20720B006513C5 /* Taxi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Taxi.swift; sourceTree = "<group>"; };
 		9A7D228E1ACC74DD033F17D9 /* Pods_Taxi_booking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Taxi_booking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FBD4F628FF733A1F0D0F97A /* Pods-Taxi booking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Taxi booking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Taxi booking/Pods-Taxi booking.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +96,7 @@
 				8FB3AB4B1C20562A006513C5 /* Images */,
 				8F6326831C1ED2CA001BB843 /* AppDelegate.swift */,
 				8FB3AB3D1C1FFDB4006513C5 /* MapVC.swift */,
+				8FB3AB4C1C20720B006513C5 /* Taxi.swift */,
 				8F63268A1C1ED2CA001BB843 /* Assets.xcassets */,
 				8F63268C1C1ED2CA001BB843 /* LaunchScreen.storyboard */,
 				8F6326871C1ED2CA001BB843 /* Main.storyboard */,
@@ -236,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FB3AB3E1C1FFDB4006513C5 /* MapVC.swift in Sources */,
+				8FB3AB4D1C20720B006513C5 /* Taxi.swift in Sources */,
 				8F6326841C1ED2CA001BB843 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
