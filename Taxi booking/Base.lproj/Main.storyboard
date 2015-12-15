@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MQe-6w-PlA">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="UUF-OL-0VO">
+            <objects>
+                <navigationController id="MQe-6w-PlA" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zuQ-AO-g5Q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="L13-4H-WyD" kind="relationship" relationship="rootViewController" id="A1t-L8-OLX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3yu-9f-fNe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="402" y="2022"/>
+        </scene>
+        <!--Taxis à proximité-->
+        <scene sceneID="f0H-zT-Uzk">
+            <objects>
+                <viewController id="L13-4H-WyD" customClass="MapVC" customModule="Taxi_booking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mck-I3-bPH"/>
+                        <viewControllerLayoutGuide type="bottom" id="hOf-yT-OO8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FrJ-1a-lmb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="X2u-cZ-0eF">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <animations/>
+                                <connections>
+                                    <outlet property="delegate" destination="L13-4H-WyD" id="RGe-2Q-dYy"/>
+                                </connections>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D90-Be-D2E">
+                                <rect key="frame" x="558" y="560" width="32" height="32"/>
+                                <animations/>
+                                <state key="normal" image="own_cur_location.png"/>
+                                <connections>
+                                    <action selector="showUserLocation" destination="L13-4H-WyD" eventType="touchUpInside" id="FY5-kD-TsO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="X2u-cZ-0eF" firstAttribute="top" secondItem="Mck-I3-bPH" secondAttribute="bottom" id="0Fm-ed-fM4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="D90-Be-D2E" secondAttribute="trailing" constant="-10" id="8HV-ju-FbZ"/>
+                            <constraint firstItem="X2u-cZ-0eF" firstAttribute="centerX" secondItem="FrJ-1a-lmb" secondAttribute="centerX" id="8J3-Gl-fV8"/>
+                            <constraint firstItem="hOf-yT-OO8" firstAttribute="top" secondItem="X2u-cZ-0eF" secondAttribute="bottom" id="bEh-pY-hCI"/>
+                            <constraint firstItem="hOf-yT-OO8" firstAttribute="top" secondItem="D90-Be-D2E" secondAttribute="bottom" constant="8" id="pXl-Mh-66B"/>
+                            <constraint firstItem="X2u-cZ-0eF" firstAttribute="width" secondItem="FrJ-1a-lmb" secondAttribute="width" id="sbO-ce-8yZ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Carte" id="hOy-Ka-CFV"/>
+                    <navigationItem key="navigationItem" title="Taxis à proximité" id="4gU-DC-6BD">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="mKu-pa-9Z9">
+                            <connections>
+                                <action selector="refreshClicked:" destination="L13-4H-WyD" id="IkC-dz-f8b"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="X2u-cZ-0eF" id="b3c-91-ZPf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zSP-Wn-rdU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1249" y="2022"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="own_cur_location.png" width="32" height="32"/>
+    </resources>
+</document>
